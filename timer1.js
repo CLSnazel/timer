@@ -8,11 +8,11 @@
 //NaN: ignore/skip
 
 const beepTimes = process.argv.slice(2,process.argv.length).map(time => Number(time));
-for(let time of beepTimes){
-  if(time > 0 && !Number.isNaN(time)){
+for (let time of beepTimes) {
+  if (time > 0 && !Number.isNaN(time)) {
     setTimeout(() => {
       process.stdout.write('\x07');
       console.log(`Timer after ${time} seconds complete!`);
     }, time * 1000);
   }
-};
+}
